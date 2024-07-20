@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1232px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.flex-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-horizontal-center {
+  display: flex;
+  flex-direction: row;
+  align-item: center;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+/*-- Spacers --*/
+.spacer {
+  padding-bottom: 24px;
+}
+
+.spacer.xx-small {
+  padding-bottom: 4px;
+}
+
+.spacer.x-small {
+  padding-bottom: 8px;
+}
+
+.spacer.small {
+  padding-bottom: 16px;
+}
+
+.spacer.large {
+  padding-bottom: 32px;
+}
+
+.spacer.x-large {
+  padding-bottom: 40px;
+}
+
+.spacer.xx-large {
+  padding-bottom: 48px;
+}
+
+.spacer.xxx-large {
+  padding-bottom: 56px;
+}
+
+.spacer.xxxx-large {
+  padding-bottom: 64px;
+}
+
+.spacer.section {
+  padding-bottom: 80px;
+}
+
+.banner-container .banner-header {
+  position: relative;
+}
+.banner-container .banner-header h1, .banner-container .banner-header p {
+  color: #fff;
+}
+.banner-container .banner-header h1 {
+  font-size: 64px;
+}
+.banner-container .banner-header p {
+  font-size: 26px;
+}
+.banner-container .banner-header img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+.banner-container .banner-header .banner-header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 30%;
+  flex: 0 0 auto;
+}
+.card .card-content {
+  border: 1px solid #ddd;
+  padding: 24px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  min-height: 300px;
+}
+.card-desc p {
+  text-align: center;
+  line-height: 1.3;
+  font-size: 21px;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card button {
+  border: 3px solid #000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border-radius: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .card {
+    width: 45%;
+    padding: 10px;
+  }
+  .card-desc {
+    min-height: 400px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card {
+    width: 100%;
+    padding: 0;
+  }
+  .card-desc {
+    min-height: 370px;
+  }
+}
+.tab-menu {
+  border-bottom: 3px solid #0f0f0f;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 991px) {
+  .tab-menu {
+    display: block;
+  }
+}
+.tab-menu .tab-item {
+  display: inline-block;
+  width: auto;
+}
+
+.tab-section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 991px) {
+  .tab-section .tab-item .tab-title {
+    display: none;
+  }
+}
+
+.tab-item {
+  display: block;
+  width: 100%;
+}
+.tab-item .tab-title {
+  background: #dedede;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  transition: 0.4s ease;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+.tab-item .tab-title:hover, .tab-item .tab-title.is-active {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 991px) {
+  .tab-item .tab-title {
+    width: auto;
+  }
+}
+.tab-item .tab-content {
+  box-sizing: border-box;
+  display: none;
+  height: 0;
+  left: 0;
+  opacity: 0;
+  padding: 0 2rem;
+  position: relative;
+  visibility: hidden;
+  width: 100%;
+  transition: 0.4s ease;
+}
+.tab-item .tab-content.is-active {
+  display: block;
+  height: auto;
+  opacity: 1;
+  padding: 1rem 2rem;
+  visibility: visible;
+}
+
+/*# sourceMappingURL=main.min.css.map */
